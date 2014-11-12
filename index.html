@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<link rel="stylesheet" href="css/presentation.css">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Welcome to the</h1>
+					<h2>Cleveland Ruby Brigade</h1>
+					<h3>Build your own Gem workshop!</h3>
+					<p>
+						<small>October 2nd, 2014</small>
+					</p>
+				</section>
+<section>
+	<h2>What is a RubyGem?</h2>
+	<p>
+		RubyGems is a package manager for the Ruby programming language
+		that provides a standard format for distributing Ruby programs and
+		libraries (in a self-contained format called a "gem"), a tool
+		designed to easily manage the installation of gems, and a server
+		for distributing them.
+	</p>
+	<p>
+		<small class="siting">- http://en.wikipedia.org/wiki/RubyGems</small>
+	</p>
+</section>
+
+				<section>
+					<h2>What is a RubyGem?</h2>
+					<p>Ruby code + [gemname].gemspec</p>
+					<pre>
+Gem::Specification.new do |s|
+  s.name        = 'your_fancy_gem'
+  s.version     = '0.0.0'
+  s.date        = '2014-10-02'
+  s.summary     = "Your Fancy Gem"
+  s.description = "The fanciest gem ever!"
+  s.authors     = ["Joel"]
+  s.email       = 'joelbyler@gmail.com'
+  s.files       = ["lib/fancy.rb"]
+  s.homepage    = 'http://rubygems.org/gems/your_fancy_gem'
+  s.license       = 'MIT'
+end
+					</pre>
+				</section>
+
+				<section>
+					<h2>Why?</h2>
+					<p>
+						In software engineering, don’t repeat yourself (DRY) is a principle of software development, aimed at reducing repetition of information of all kinds, especially useful in multi-tier architectures.
+					</p>
+					<p>
+						<small class="siting">- http://en.wikipedia.org/wiki/Don't_repeat_yourself</small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Who?</h2>
+					<p>Anybody can do it.  You just need some code that you want to share</p>
+				</section>
+
+				<section>
+					<h2>Where?</h2>
+					<ul>
+						<li>Locally:
+<pre><code data-trim contenteditable>
+gem 'foo', :path => '/path/to/foo'
+</code></pre>
+						</li>
+						<li>Github:
+<pre><code data-trim contenteditable>
+gem 'nokogiri', :git => 'https://github.com/tenderlove/nokogiri.git'.
+</code></pre>
+						</li>
+						<li>Server:
+<pre><code data-trim contenteditable>
+source 'rubygems.org'
+gem 'rails', '4.1.6'
+</code></pre>
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>How?</h2>
+					<ul>
+					<li>Form small groups, a pair or maybe more.</li>
+					<li>Walk through the rubygems.org guide(s).</li>
+					<li>Substitute your own code if you wish.</li>
+					<li>Try to make sure that everyone gets a chance to try.</li>
+				</ul>
+				</section>
+
+				<section>
+					<h2>Resources</h2>
+					<ul>
+						<li></li>
+						<li>http://guides.rubygems.org/make-your-own-gem/</li>
+						<li>http://www.kataclub.com/</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Lets get started!</h2>
+				</section>
+
+				<section>
+					<h2>Wrap up...</h2>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
